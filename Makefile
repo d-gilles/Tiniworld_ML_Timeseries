@@ -1,3 +1,6 @@
+start:
+	mkdir model
+
 docker_build:
 	docker build -t tiniworld_webapp .
 
