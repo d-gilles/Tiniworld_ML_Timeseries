@@ -14,7 +14,7 @@ tini.cv_and_save_all_models()
 # 02.12.2022
 # fit a model for the entire business (all locations together,
 # to see the performance and trend of the whole business)
-tini.cv_and_save_all_models(all_over=True)
+# tini.cv_and_save_all_models(all_over=True)
 
 
 # Gives back the number of locations and the names of the locations
