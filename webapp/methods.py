@@ -9,11 +9,11 @@ import streamlit as st
 tini = Tiniworld()
 
 if 'store' not in st.session_state:
-    st.session_state['store'] = 'TW-PS004'
+    st.session_state['store'] = 'TW-PS002'
 if 'forecast' not in st.session_state:
     st.session_state['forecast'] = 60
 if 'store' not in st.session_state:
-    st.session_state['store'] = 'TW-PS008'
+    st.session_state['store'] = 'TW-PS002'
 if 'forecast' not in st.session_state:
             st.session_state['forecast'] = 60
 if 'ratio' not in st.session_state:
@@ -25,16 +25,16 @@ if 'color' not in st.session_state:
 if 'compare' not in st.session_state:
             st.session_state['compare'] = False
 if 'store_c' not in st.session_state:
-            st.session_state['store_c'] = 'TW-PS016'
+            st.session_state['store_c'] = 'TW-PS038'
 
 class AppFunktion:
     def load_session_state(self):
         if 'store' not in st.session_state:
-            st.session_state['store'] = 'TW-PS004'
+            st.session_state['store'] = 'TW-PS002'
         if 'forecast' not in st.session_state:
             st.session_state['forecast'] = 60
         if 'store' not in st.session_state:
-            st.session_state['store'] = 'TW-PS004'
+            st.session_state['store'] = 'TW-PS002'
         if 'forecast' not in st.session_state:
                     st.session_state['forecast'] = 60
         if 'ratio' not in st.session_state:
@@ -46,7 +46,7 @@ class AppFunktion:
         if 'compare' not in st.session_state:
                     st.session_state['compare'] = False
         if 'store_c' not in st.session_state:
-                    st.session_state['store_c'] = 'TW-PS016'
+                    st.session_state['store_c'] = 'TW-PS038'
 
     def load_data(self,n = st.session_state['store'], t = st.session_state['forecast']):   # n = storecode, t= time of days to forecast
         self.load_session_state()
