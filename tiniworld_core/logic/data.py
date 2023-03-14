@@ -29,6 +29,7 @@ class Tiniworld:
 # *** getting data ***
 #
     #load data from folder
+
     def get_raw_data(self) -> pd.DataFrame:
         '''
         including item translation to english
@@ -236,13 +237,8 @@ class Tiniworld:
         '''
         report = pd.DataFrame(columns=['changepoint_prior_scale','seasonality_prior_scale','location','mae'])
 
-        # if not all_over:
         df_all = self.get_stores_ds_alltime()
         store_names = self.get_store_names()
-
-        # else:
-        #     df_all = self.get_all_company()
-        #     store_names = ['all']
 
         n = len(store_names)
 
@@ -253,7 +249,7 @@ class Tiniworld:
             df = df.groupby('ds').sum().reset_index()
             y = self.cv_model(df,location)
             report = pd.concat([report,y])
-        report.to_csv(f'{LOCAL_MODEL_PATH}/report{store_nu}.csv')
+        report.to_csv(f'{LOCAL_MODEL_PATH}/report_of_{store_nu+1}_datasets.csv')
         print(f'Done ... saved {n} models and one report to {LOCAL_MODEL_PATH}')
         return report
 #
