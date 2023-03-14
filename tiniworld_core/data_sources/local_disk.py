@@ -8,7 +8,7 @@ from tiniworld_core.logic.params import LOCAL_DATA_PATH
 
 def get_data(path: str,
                      columns: list = None,
-                     verbose=True) -> pd.DataFrame:
+                     verbose=False) -> pd.DataFrame:
     """
     return the raw dataset from local disk
     """

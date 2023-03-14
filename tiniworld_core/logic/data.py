@@ -1,7 +1,10 @@
 import os
 import pandas as pd
+import os
+
 from tiniworld_core.data_sources.local_disk import get_data
 from tiniworld_core.logic.params import LOCAL_MODEL_PATH, THRESHOLD
+
 
 from prophet import Prophet
 from prophet.diagnostics import cross_validation
