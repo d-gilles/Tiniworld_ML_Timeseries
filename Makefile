@@ -1,8 +1,5 @@
 start:
 	mkdir -p model
-	pip install -r requirements.txt
-	export PYTHONPATH=$PWD
-
 
 train:
 	python tiniworld_core/main.py
