@@ -1,7 +1,6 @@
 from tiniworld_core.logic.data import Tiniworld
 
 tini = Tiniworld()
-tini.ping()
 
 '''
 This is the main file to run the project.
