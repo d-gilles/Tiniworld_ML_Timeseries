@@ -250,7 +250,7 @@ class Tiniworld:
             df = df.groupby('ds').sum().reset_index()
             y = self.cv_model(df,location)
             report = pd.concat([report,y])
-            report.to_csv(f'{LOCAL_MODEL_PATH}/report.csv')
+            report.to_csv(f'{LOCAL_MODEL_PATH}/report{store_nu}.csv')
             print(f'Done ... saved {n} models and one report to {LOCAL_MODEL_PATH}')
         return report
 #

@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from tiniworld_core.data_sources.local_disk import get_location_data
 
-# Private method: https://www.geeksforgeeks.org/private-methods-in-python/
+
 class TWLocation:
     '''
     DataFrames containing all orders as index,

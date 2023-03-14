@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from colorama import Fore, Style
+# from colorama import Fore, Style
 from tiniworld_core.logic.params import LOCAL_DATA_PATH
 
 # load data from local disk and translate item_name to english
@@ -18,7 +18,7 @@ def get_data(path: str,
 
     if verbose:
         print("The path is: ", path)
-        print(Fore.MAGENTA + f"Source data from {path}: {'all'} rows " + Style.RESET_ALL)
+        print(f"Source data from {path}: {'all'} rows ")
 
     try:
         dtypes = {'docDate': object, 'item_code': object, 'item_name': object, 'qty': int, 'store_code': object, 'store_name': object}
@@ -98,7 +98,7 @@ def get_location_data_(path: str,
 
     if verbose:
         print("The path is: ", path)
-        print(Fore.MAGENTA + f"Source data from {path}: {'all'} rows " + Style.RESET_ALL)
+        print(f"Source data from {path}: {'all'} rows ")
 
     try:
 
@@ -122,4 +122,4 @@ def get_location_data_(path: str,
     return df
 
 if __name__ == '__main__':
-    print('nothing to do here')
+    print('Nothing to do here. Follow the instructions in the README.md file.')

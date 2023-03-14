@@ -1,15 +1,8 @@
 pandas==1.5.3
 plotly==5.13.0
 prophet==1.1.2
-#requests==2.28.2
 streamlit==1.17.0
 colorama==0.4.6
 matplotlib==3.6.3
 numpy==1.24.2
-
 korean-lunar-calendar==0.3.1
-
-#packaging==23.0
-
-#fonttools==4.38.0
-#entrypoints==0.4
