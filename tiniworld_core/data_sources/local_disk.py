@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 # from colorama import Fore, Style
-from tiniworld_core.logic.params import LOCAL_DATA_PATH
+from logic.params import LOCAL_DATA_PATH
 
 # load data from local disk and translate item_name to english
 # -----------------------------
