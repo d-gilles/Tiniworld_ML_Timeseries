@@ -1,5 +1,6 @@
 pandas==1.5.3
 plotly==5.13.0
+holidays==0.20
 prophet==1.1.2
 korean-lunar-calendar==0.3.1
 streamlit==1.17.0
