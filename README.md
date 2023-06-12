@@ -10,7 +10,7 @@ The aim of this project is to analyze the ticket sales of an indoor playground o
 
 ### To run this project ...
 - Download the repo, it includes all the data needed.
-- run `make start` to set up a folder for the ML models and install requirements.
+- run `make setup` to set up a folder for the ML models and install requirements.
 - run `make train` to crossvalidate und fit models all location with ticke sales > `THRESHOLD` .
 
 
@@ -22,7 +22,7 @@ After setting up and training the models, you can now see the results.
 This project includes a streamlit http frontend to interact with the data.
 You can choose from 2 options to run the frontend.
 
-1.  Run streamlit direct by `make streamlit`
+1.  Run streamlit direct by `make app`
 2.  Use Docker. For this you need a docker Daemon running on your machine. To build a docker image, just run `make docker_build` and to run it in a container - guess what - run `make docker_run`.
 
 In both cases streamlit should automatically start your browser and go to `localhost:8501` if not click [here](http://localhost:8501)
