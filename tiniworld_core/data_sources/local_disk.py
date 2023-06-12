@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 # from colorama import Fore, Style
-from logic.params import LOCAL_DATA_PATH
+from tiniworld_core.logic.params import LOCAL_DATA_PATH
 
 # load data from local disk and translate item_name to english
 # -----------------------------
@@ -34,7 +34,7 @@ def get_data(path: str,
 
         return None  # end of data
 
-    # make a dictionary
+
     # VN to EN translation of item_name
     # Happy Day == Members Day (Loyalty program)
 
@@ -101,16 +101,10 @@ def get_location_data_(path: str,
         print(f"Source data from {path}: {'all'} rows ")
 
     try:
-
         #dtypes = {'docDate': object, 'item_code': object, 'item_name': object, 'qty': int, 'store_code': object, 'store_name': object}
         df = pd.read_csv(
                 path,
                 dtype=None)  # read all rows
-
-
-        # read_csv(dtypes=...) will silently fail to convert data types, if column names do no match dictionnary key provided.
-        #if isinstance(dtypes, dict):
-        #    assert dict(df.dtypes) == dtypes
 
         if columns is not None:
             df.columns = columns

@@ -28,7 +28,6 @@ class Tiniworld:
 # *** getting data ***
 #
     #load data from folder
-
     def get_raw_data(self) -> pd.DataFrame:
         '''
         including item translation to english
@@ -36,8 +35,8 @@ class Tiniworld:
         '''
         df = get_data("ticket-sales") #filename without the file extension
         return df
-    # get the dictionary containing all locations as DF
 
+    # get the dictionary containing all locations as DF
     def get_stores_ds_alltime(self) -> dict:
         """
         This function returns a Python dict.
@@ -48,8 +47,8 @@ class Tiniworld:
 
         df = get_data("ticket-sales") #filename without the file extension
 
-        ## start of cleaning pipeline
-        #add column with date as datetime and right name for prophet (ds)
+        # start of cleaning pipeline
+        # add column with date as datetime and right name for prophet (ds)
         df['ds']=pd.to_datetime(df['docDate'])
 
         #add column with target 'y'

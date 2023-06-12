@@ -1,10 +1,5 @@
-import os
-import sys
-
-# Add the current working directory to the Python module search path
-sys.path.append(os.path.abspath(os.getcwd()))
-
 from tiniworld_core.logic.data import Tiniworld
+
 from webapp.methods import AppFunktion
 
 import pandas as pd
