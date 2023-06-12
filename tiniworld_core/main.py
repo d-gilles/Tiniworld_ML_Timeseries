@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.getcwd()))
+
 from logic.data import Tiniworld
 tini = Tiniworld()
 
