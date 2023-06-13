@@ -3,3 +3,4 @@ model/
 .python-version
 build/
 *.egg-info
+.env
