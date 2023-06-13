@@ -57,7 +57,6 @@ class Tiniworld:
         #find the locations with the most data - threshold is entries in dataset for one location
         # THRESHOLD include only locations with more than 2300 entries -> params.py
         store_list = df.groupby('store_code').count()[(df.groupby('store_code').count()>THRESHOLD)['y']]
-        print('Threshold = ',THRESHOLD)
 
         #extract location keys
         store_code = store_list.index

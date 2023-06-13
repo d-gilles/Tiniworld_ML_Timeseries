@@ -3,6 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.getcwd()))
 
 from logic.data import Tiniworld
+from logic.params import THRESHOLD
 tini = Tiniworld()
 
 '''
@@ -11,6 +12,9 @@ It loads the data, trains the models and saves them.
 '''
 
 # Does a cross validation for all the models and saves them (each location separately):
+print(f"Training and saving all models with more than {THRESHOLD} data points")
+print("This might take a while...")
+
 tini.cv_and_save_all_models()
 
 # Gives back the number of locations and the names of the locations
