@@ -8,6 +8,9 @@ The aim of this project is to analyze the ticket sales of an indoor playground o
 -	Train machine learning models based on these data sets.
 -	Provision of the graphical evaluation of the data in a web app
 
+### LIVE DEMO
+Have a look at the app [here](https://tiniworld-pp2ipk3ezq-ey.a.run.app/)
+
 ### To run this project ...
 - Download the repo, it includes all the data needed.
 - run `make setup` to set up a folder for the ML models and install requirements.
