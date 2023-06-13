@@ -32,9 +32,9 @@ COPY model model
 
 ENV PYTHONPATH "${PYTHONPATH}:/webapp/tiniworld_core"
 
-EXPOSE 8501
+EXPOSE 8080
 
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
+HEALTHCHECK CMD curl --fail http://localhost:8080/_stcore/health
 
-ENTRYPOINT ["streamlit", "run", "webapp/0_🏠_Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "webapp/0_🏠_Home.py", "--server.port=8080", "--server.address=0.0.0.0"]
 #CMD streamlit run webapp/0_🏠_Home.py --server.port 8501 --server.address 0.0.0.0
