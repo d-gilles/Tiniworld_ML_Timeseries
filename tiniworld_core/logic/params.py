@@ -7,4 +7,4 @@ import numpy as np
 
 LOCAL_DATA_PATH='raw_data'
 LOCAL_MODEL_PATH='model'
-THRESHOLD = 3500
+THRESHOLD = 2500

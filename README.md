@@ -9,7 +9,7 @@ The aim of this project is to analyze the ticket sales of an indoor playground o
 -	Provision of the graphical evaluation of the data in a web app
 
 ### LIVE DEMO
-Have a look at the app [here](https://tiniworld-pp2ipk3ezq-ey.a.run.app/)
+Have a look at the app [here](https://tiniworld-x2l45i3jcq-ey.a.run.app/)
 
 ### To run this project ...
 - Download the repo, it includes all the data needed.
