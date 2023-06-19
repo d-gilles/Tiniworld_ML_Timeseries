@@ -6,4 +6,4 @@ import os
 
 LOCAL_DATA_PATH='raw_data'
 LOCAL_MODEL_PATH='model'
-THRESHOLD = os.environ.get('THRESHOLD', 3500)
+THRESHOLD = int(os.environ.get('THRESHOLD', 3500))
