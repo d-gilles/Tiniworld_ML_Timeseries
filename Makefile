@@ -10,12 +10,12 @@ app:
 	@streamlit run webapp/0_🏠_Home.py
 
 docker_build:
-	@docker build -t $(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest .
+	@docker build -t tiniworld:latest .
 
 docker_run:
 	@docker run -it --rm \
 		-p  8080:8080 \
-		$(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest
+		tiniworld:latest
 
 tf_init:
 	@terraform init
@@ -39,6 +39,7 @@ local:
 	app
 
 online:
+	@docker build -t $(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest .
 	tf_init
 	docker_build
 	docker_push
