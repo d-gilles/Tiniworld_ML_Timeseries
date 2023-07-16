@@ -10,7 +10,7 @@ The aim of this project is to analyze the ticket sales of an indoor playground o
 - run this app locally or in the cloud
 
 ### LIVE DEMO
-Have a look at the app [here](https://tiniworld-x2l45i3jcq-ey.a.run.app/)
+Have a look at the app [here](https://tiniworld-yknatb6hna-ey.a.run.app/)
 
 ### tech and tools
 ... used in this project:
@@ -50,17 +50,19 @@ You can choose from 3 options to run the frontend.
 ### Deploy online
 This repo includes a configuration to setup a gcp environment and deploy the app online. If you would like to do that you will need a few things.
 
-**Install Terraform:**</br> If you haven't already, you'll need to install Terraform on your machine. Instructions can be found on the official HashiCorp website.
+**Install Terraform:**</br> If you haven't already, you'll need to install Terraform on your machine. Instructions can be found on [the official HashiCorp website](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
 **Set Up Google Cloud Platform (GCP) Project:** </br>
 - Login to gcp or create a account.
 - Create a new project on GCP.
-- Provide the project ID in the .env file as `TF_VAR_PROJECT_ID`
+- Provide the project ID and project region in the .env file as `TF_VAR_PROJECT_ID` and `TF_VAR_REGION`
+
 
 **Set Up GCP Authentication:**
 - Create a new Service Account for Terraform in the GCP Console, ensuring that it has sufficient permissions for the resources you'll be managing (usually Project or Owner level).
 - Create and download a JSON key for this Service Account.
 - Set an environment variable `GOOGLE_APPLICATION_CREDENTIALS` to the path of the downloaded JSON key file. You can also do this in the .env file, so it will be set just inside this folder.
+- Activate the [**Cloud Resource Manager API**](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com) for your project
 
 **Run the app online:**</br>
 After doing the steps above, just run `make online` to deploy the app on gcp.

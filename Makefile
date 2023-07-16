@@ -40,11 +40,10 @@ local:
 
 online:
 	@docker build -t $(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest .
-	tf_init
-	docker_build
-	docker_push
-	docker_deploy
-	get_URL
+	make tf_init
+	make docker_push
+	make docker_deploy
+	make get_URL
 
 kill:
 	@terraform destroy -auto-approve
