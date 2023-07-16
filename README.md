@@ -43,7 +43,7 @@ You can choose from 3 options to run the frontend.
 1.  Run streamlit direct by `make app`
 2.  Use Docker. For this you need a docker Daemon running on your machine. To build a docker image, just run `make docker_build` and to run it in a container - guess what - run `make docker_run`.
 
-    In both cases streamlit should automatically start your browser and go to `localhost:8501` if not click [here](http://localhost:8501)
+    In both cases streamlit should automatically start your browser and go to `localhost:8080` if not click [here](http://localhost:8501)
 
 3. Host the frontend online on Google Cloud Platform
 
