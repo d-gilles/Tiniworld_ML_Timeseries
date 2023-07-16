@@ -22,14 +22,14 @@ tf_init:
 	@terraform apply -auto-approve
 
 docker_push:
-	@docker push $(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest
+	@docker push $(CONTAINER_REGISTRY)/$(TF_VAR_project)/$(IMAGE_NAME):latest
 
 docker_deploy:
-	@gcloud config set project $(TF_VAR_PROJECT)
-	@gcloud run deploy tiniworld --image $(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest --platform managed --region $(TF_VAR_REGION) --allow-unauthenticated
+	@gcloud config set project $(TF_VAR_project)
+	@gcloud run deploy tiniworld --image $(CONTAINER_REGISTRY)/$(TF_VAR_project)/$(IMAGE_NAME):latest --platform managed --region $(TF_VAR_region) --allow-unauthenticated
 
 get_URL:
-	@echo "The URL of your app is: $$(gcloud run services describe $(IMAGE_NAME) --region $(TF_VAR_REGION) --platform managed --format "value(status.url)")"
+	@echo "The URL of your app is: $$(gcloud run services describe $(IMAGE_NAME) --region $(TF_VAR_region) --platform managed --format "value(status.url)")"
 
 prepare:
 	setup
@@ -39,7 +39,7 @@ local:
 	app
 
 online:
-	@docker build -t $(CONTAINER_REGISTRY)/$(TF_VAR_PROJECT)/$(IMAGE_NAME):latest .
+	@docker build -t $(CONTAINER_REGISTRY)/$(TF_VAR_project)/$(IMAGE_NAME):latest .
 	make tf_init
 	make docker_push
 	make docker_deploy
@@ -47,4 +47,4 @@ online:
 
 kill:
 	@terraform destroy -auto-approve
-	@gcloud projects delete $(TF_VAR_PROJECT) --quiet
+	@gcloud projects delete $(TF_VAR_project) --quiet
